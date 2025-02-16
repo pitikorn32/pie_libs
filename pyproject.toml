@@ -4,8 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pie_libs"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
+    "pytz",
     "PyYAML",
     "pymsteams",
     "line-bot-sdk",

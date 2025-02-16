@@ -1,7 +1,8 @@
 import pymsteams
+from .base import BaseNotification
 
 
-class MSTeamsNotification:
+class MSTeamsNotification(BaseNotification):
     """
     A class to send notifications to Microsoft Teams using a webhook URL.
 
@@ -22,6 +23,8 @@ class MSTeamsNotification:
     """
 
     def __init__(self, webhook_url: str):
+        super().__init__()
+
         self.webhook_url = webhook_url
         self.myTeamsMessage = pymsteams.connectorcard(webhook_url)
 
